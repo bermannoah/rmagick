@@ -40,8 +40,15 @@
 #undef PACKAGE_TARNAME
 #undef WORDS_BIGENDIAN
 
+#if ("magick/magickcore.h")
 #include "magick/MagickCore.h"
 #include "magick/magick-config.h"
+#elif ("MagickCore/MagickCore.h")
+#include "MagickCore/MagickCore.h"
+#include "MagickWand/MAgickWand.h"
+#include "MagickCore/MagickCore-config"
+#include "MagickWand/MagickWand-config"
+#endif
 
 // Undef ImageMagick's versions of these symbols
 #undef PACKAGE_STRING
@@ -1284,4 +1291,3 @@ extern void   rm_fatal_error_handler(const ExceptionType, const char *, const ch
 extern void   rm_error_handler(const ExceptionType, const char *, const char *);
 extern void   rm_warning_handler(const ExceptionType, const char *, const char *);
 #endif
-

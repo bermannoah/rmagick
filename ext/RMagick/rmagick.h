@@ -12,8 +12,8 @@
 
 #ifndef _RMAGICK_H_
 #define _RMAGICK_H_
-#define IM_VERSION_SIX_AND_LOWER "magick/magickcore.h"
-#define IM_VERSION_SEVEN_AND_HIGHER "MagickCore/MagickCore.h"
+#define IM_VERSION_SIX_AND_LOWER 'magick/magickcore.h'
+#define IM_VERSION_SEVEN_AND_HIGHER 'MagickCore/MagickCore.h'
 
 //! Suppress warnings about deprecated functions on Windows
 #define _CRT_SECURE_NO_DEPRECATE 1
@@ -45,7 +45,8 @@
 #if IM_VERSION_SIX_AND_LOWER
 #include "magick/MagickCore.h"
 #include "magick/magick-config.h"
-#elif IM_VERSION_SEVEN_AND_HIGHER
+#endif
+#if IM_VERSION_SEVEN_AND_HIGHER
 #include "MagickCore/MagickCore.h"
 #include "MagickWand/MAgickWand.h"
 #include "MagickCore/MagickCore-config"

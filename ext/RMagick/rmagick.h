@@ -45,7 +45,7 @@
 #if defined(IM_VERSION_SIX_AND_LOWER)
 #include "magick/MagickCore.h"
 #include "magick/magick-config.h"
-#else
+#elif !IM_VERSION_SIX_AND_LOWER
 #include "MagickCore/MagickCore.h"
 #include "MagickWand/MAgickWand.h"
 #include "MagickCore/MagickCore-config"

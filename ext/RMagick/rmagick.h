@@ -42,14 +42,16 @@
 #undef PACKAGE_TARNAME
 #undef WORDS_BIGENDIAN
 
-#if defined(IM_VERSION_SIX_AND_LOWER)
-#include "magick/MagickCore.h"
-#include "magick/magick-config.h"
-#elif !IM_VERSION_SIX_AND_LOWER
+#if !IM_VERSION_SIX_AND_LOWER
 #include "MagickCore/MagickCore.h"
 #include "MagickWand/MAgickWand.h"
 #include "MagickCore/MagickCore-config"
 #include "MagickWand/MagickWand-config"
+#endif
+
+#if defined(IM_VERSION_SIX_AND_LOWER)
+#include "magick/MagickCore.h"
+#include "magick/magick-config.h"
 #endif
 
 // Undef ImageMagick's versions of these symbols
